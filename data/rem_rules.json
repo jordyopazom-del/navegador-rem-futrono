@@ -1,0 +1,3087 @@
+{
+  "version": "REM 2026 V1.2",
+  "ultima_actualizacion": "2026-08-15",
+  "fuente": "Manual REM 2026 Series A + Modificaciones V1.2",
+  "reglas": [
+    {
+      "id": "rem-001",
+      "prestacion": "Control Prenatal - Ingreso a Programa",
+      "terminos_busqueda": [
+        "ingreso prenatal",
+        "ingreso embarazo",
+        "embarazo ingreso",
+        "gestante ingreso",
+        "primer control prenatal",
+        "ingreso programa prenatal",
+        "gestante programa"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección A",
+        "pagina": "123"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección A: Ingresos de gestantes a Programa Prenatal",
+        "serie": "Total gestantes ingresadas / Primigestas / Ingreso antes de 14 semanas",
+        "columnas": "Col. por rango etario (10-14, 15-19, 20-34, 35+) y condición especial",
+        "descripcion": "Registrar CADA VEZ que una gestante ingresa por primera vez a control prenatal en el establecimiento. Incluir si es primigesta y si el ingreso es antes de las 14 semanas (meta de ingreso precoz GES)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-001-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección B: Evaluación de Riesgo Psicosocial Abreviada (EPSA) a gestantes",
+          "mensaje": "OBLIGATORIO (Regla R.2): El total de gestantes ingresadas a programa DEBE ser IGUAL al total de aplicaciones de EPSA registradas en REM A03 sección B. Un ingreso sin EPSA genera inconsistencia automática.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-001-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Controles de salud sexual y reproductiva",
+          "mensaje": "El control prenatal inicial debe registrarse también en REM A01 Sección A como control prenatal.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-001-c",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección E: Ingresos a control de salud de recién nacidos",
+          "mensaje": "Al nacer el hijo(a), recordar registrar el ingreso del RN a control de niño sano en sección E del mismo REM A05.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-002",
+      "prestacion": "Control Prenatal - Control de seguimiento",
+      "terminos_busqueda": [
+        "control prenatal",
+        "prenatal seguimiento",
+        "control embarazo",
+        "control gestante",
+        "control matrona embarazo",
+        "control obstetricia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección A",
+        "pagina": "32"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección A: Controles de salud sexual y reproductiva",
+        "serie": "Control Prenatal - por trimestre y profesional (Médico / Matrón/a)",
+        "columnas": "Col. por rango etario y sexo. Indicar si control con pareja/familiar",
+        "descripcion": "Cada control prenatal de seguimiento (2do, 3er trimestre, etc.) se registra aquí. Diferencia si lo realiza Médico o Matrón/a. Si la gestante asiste con pareja, marcar columna correspondiente."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-002-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección B: Controles de salud según ciclo vital - Menor de 1 mes",
+          "mensaje": "Si al primer control postnatal asiste la madre con su RN, registrar también 1 control de menor de 1 mes en sección B. Si el parto fue gemelar, registrar 2 controles de menor de 1 mes.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-003",
+      "prestacion": "Control Post Parto / Puérpera",
+      "terminos_busqueda": [
+        "post parto",
+        "puerperio",
+        "puerpera",
+        "control puerpera",
+        "puérpera",
+        "posparto",
+        "control posparto",
+        "binomio madre hijo"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección A",
+        "pagina": "32"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección A: Controles de salud sexual y reproductiva",
+        "serie": "Control Post Parto / Control de puérpera con recién nacido hasta 10 días / entre 11-28 días",
+        "columnas": "Col. por profesional (Médico o Matrón/a) y presencia del padre",
+        "descripcion": "Registrar el control dentro de los 42 días post parto. El control con díada (madre + RN hasta 10 días) es el más importante. Si el RN está hospitalizado y la madre asiste sola, igual se registra como control post parto."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-003-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección B: Control de salud menor de 1 mes",
+          "mensaje": "Si la madre asiste con el RN: registrar 1 control puérpera con RN en sección A + 1 control menor de 1 mes en sección B. Son dos registros separados en el mismo REM A01.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-004",
+      "prestacion": "Control Niño Sano - Lactante (menor de 1 año)",
+      "terminos_busqueda": [
+        "niño sano",
+        "control niño",
+        "control lactante",
+        "control infantil",
+        "control menor un año",
+        "control bebe",
+        "control recien nacido",
+        "RN control"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección B",
+        "pagina": "35"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección B: Controles de salud según ciclo vital",
+        "serie": "Control de salud por grupo de edad: menor 1 mes / 1-11 meses",
+        "columnas": "Col. por rango etario, sexo y profesional. Columna 'con presencia del padre' para menores de 4 años",
+        "descripcion": "Registrar el control preventivo del niño/a según edad. Para menores de 4 años, marcar si hay presencia del padre. Los TENS solo pueden registrar controles en zonas rurales o aisladas."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-004-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección A: Test de Desarrollo Psicomotor (TEPSI, DSM, Battelle)",
+          "mensaje": "Si aplicaste test de desarrollo (TEPSI, DSM, escala de Massie-Campbell, etc.) durante el control, regístralo en REM A03. Es un registro adicional, no reemplaza el control en A01.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-004-b",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección E: Ingresos a control de salud de recién nacidos",
+          "mensaje": "Si el niño/a tiene 28 días o menos y es su PRIMER control, también registrar el ingreso en REM A05 sección E.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-005",
+      "prestacion": "Control Niño Sano - Preescolar y Escolar (1-9 años)",
+      "terminos_busqueda": [
+        "control preescolar",
+        "control escolar",
+        "niño 1 año",
+        "niño 2 años",
+        "niño 3 años",
+        "niño 4 años",
+        "niño 5 años",
+        "niño 6 años",
+        "control niño sano preescolar"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección B",
+        "pagina": "35"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección B: Controles de salud según ciclo vital",
+        "serie": "Control de salud por grupo de edad: 1-4 años / 5-9 años",
+        "columnas": "Col. por rango etario, sexo y profesional",
+        "descripcion": "Registrar el control preventivo según edad. Para menores de 4 años siempre marcar presencia del padre si corresponde."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-005-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección A: Evaluaciones de desarrollo psicomotor",
+          "mensaje": "Si aplicaste TEPSI, test de Battelle u otro instrumento de desarrollo, registrarlo en REM A03 Sección A.",
+          "criticidad": "media"
+        },
+        {
+          "id": "cruce-005-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección E: Controles de salud en establecimientos educacionales",
+          "mensaje": "Si el control se realizó en el colegio (no en el CESFAM), registrar en sección E del REM A01. El registro escolar debe estar contenido en la sección B.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-006",
+      "prestacion": "Control de Salud Adolescente (CLAP)",
+      "terminos_busqueda": [
+        "clap",
+        "control adolescente",
+        "salud adolescente",
+        "ficha clap",
+        "espacio amigable",
+        "control joven",
+        "adolescente control"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Secciones B y D",
+        "pagina": "37"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección D: Control de salud integral de adolescentes (incluidos en sección B)",
+        "serie": "Grupos 10-14 años y 15-19 años, por lugar de atención",
+        "columnas": "Col. por sexo, lugar (Espacio Amigable, establecimiento, educacional, otro), SENAME/reinserción",
+        "descripcion": "Registrar el control integral de adolescente con ficha CLAP. Atención: este registro DEBE estar incluido también en la sección B del mismo REM A01 (regla de consistencia obligatoria)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-006-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección B: Controles de salud según ciclo vital (10-19 años)",
+          "mensaje": "OBLIGATORIO (Regla R.1): El total de controles de adolescentes en sección D DEBE estar incluido en sección B. Si no se registra en B, el sistema detectará inconsistencia.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-006-b",
+          "pestaña_destino": "REM A02",
+          "seccion_destino": "Sección A: EMP realizado por profesional (15-19 años)",
+          "mensaje": "Si el adolescente tiene 15-19 años y se le realizó el EMP completo, registrarlo además en REM A02. El EMP de 15-19 años debe coincidir con los controles de salud de 15-19 años (Regla R.2 de REM A02).",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-007",
+      "prestacion": "EMP - Examen de Medicina Preventiva (15-64 años)",
+      "terminos_busqueda": [
+        "emp",
+        "examen medicina preventiva",
+        "examen preventivo adulto",
+        "preventivo adulto",
+        "emp adulto",
+        "examen preventivo",
+        "audit",
+        "assist",
+        "craff"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A02 Sección A",
+        "pagina": "48"
+      },
+      "registro_principal": {
+        "pestaña": "REM A02",
+        "seccion": "Sección A: EMP realizado por profesional",
+        "serie": "EMP por rango etario (15-19, 20-44, 45-64) y profesional",
+        "columnas": "Col. por sexo, pueblos originarios, migrantes",
+        "descripcion": "Registrar el EMP cuando se completa la evaluación completa: estado nutricional (IMC), aplicación de escalas (CRAFF para 15-19 años, AUDIT+ASSIST para 20+) y solicitud de exámenes de laboratorio. El resultado de los exámenes se registra en el mes que se obtienen, no en el mes del EMP."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-007-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección D.1: Escalas de riesgo (AUDIT, ASSIST, CRAFF)",
+          "mensaje": "OBLIGATORIO (Regla R.1): Los EMP deben ser consistentes con el total de aplicaciones de CRAFF (15-19 años) o la suma AUDIT+ASSIST (20+ años) en REM A03 sección D.1. Son registros que deben cuadrar.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-007-b",
+          "pestaña_destino": "REM A02",
+          "seccion_destino": "Sección B: EMP según resultado estado nutricional",
+          "mensaje": "La suma de EMP por estado nutricional (sección B) debe ser IGUAL al total de EMP realizados (sección A). No olvidar clasificar a cada persona atendida por su IMC.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-007-c",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A o B: Consulta médica o no médica",
+          "mensaje": "Cuando el paciente vuelve para ver los resultados de los exámenes del EMP, esa atención se registra como CONSULTA en REM A04, no como otro EMP.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-008",
+      "prestacion": "EMPAM - Examen de Medicina Preventiva del Adulto Mayor (65+ años)",
+      "terminos_busqueda": [
+        "empam",
+        "adulto mayor preventivo",
+        "examen adulto mayor",
+        "preventivo 65",
+        "efam",
+        "barthel",
+        "yesavage",
+        "minimental",
+        "tinetti",
+        "gerontologico",
+        "empam 65"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A02 / REM A03",
+        "pagina": "135"
+      },
+      "registro_principal": {
+        "pestaña": "REM A02",
+        "seccion": "Sección A: EMP realizado por profesional",
+        "serie": "EMP por rango etario 65-74 años / 75-79 años / 80 años y más",
+        "columnas": "Col. por sexo y profesional que realizó el EMPAM",
+        "descripcion": "El EMPAM se registra en REM A02 como EMP para mayores de 65 años. Se registra cuando se completa la evaluación incluyendo aplicación de escalas funcionales."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-008-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección C: Escalas de funcionalidad del adulto mayor (EFAM, Barthel, Yesavage, Minimental, Tinetti)",
+          "mensaje": "OBLIGATORIO: Cada escala aplicada durante el EMPAM (EFAM, Barthel, Yesavage, etc.) se registra por separado en REM A03 sección C. Si aplicaste 3 escalas, son 3 registros en A03.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-008-b",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección K: Ingresos al Programa del Adulto Mayor según funcionalidad",
+          "mensaje": "Si es el primer EMPAM del adulto mayor y califica para ingreso al programa (autovalente, autovalente con riesgo, dependiente leve/moderado/severo), registrar el ingreso en REM A05 sección K.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-009",
+      "prestacion": "Consulta Médica de Morbilidad General",
+      "terminos_busqueda": [
+        "consulta medica",
+        "consulta médica",
+        "morbilidad médica",
+        "morbilidad medica",
+        "atencion medica",
+        "atención médica",
+        "box medico",
+        "consulta general",
+        "consulta doctor"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección A",
+        "pagina": "91"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección A: Consultas médicas",
+        "serie": "Por tipo diagnóstico: IRA, SBO, Neumonía, Cardiovascular, Salud Mental, Ginecológica, Otras morbilidades, etc.",
+        "columnas": "Col. por rango etario, sexo, pueblos originarios, migrantes, SENAME",
+        "descripcion": "Registrar cada consulta médica por el tipo de diagnóstico principal. Si el diagnóstico es cardiovascular (HTA, DM, etc.), usar esa categoría aunque el paciente ya esté en programa."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-009-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección H: Ingresos al Programa de Salud Cardiovascular",
+          "mensaje": "Si en la consulta se diagnostica HTA, DM2 o dislipidemia por primera vez, evalúa si corresponde ingresar al PSCV. Si ingresa, registrar en REM A05 sección H.",
+          "criticidad": "media"
+        },
+        {
+          "id": "cruce-009-b",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección D: Consultas en horario continuado",
+          "mensaje": "Si la consulta se realizó en horario de extensión (continuado), también marcarla en sección D de REM A04. Las consultas de sección D deben estar incluidas en sección A.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-010",
+      "prestacion": "Consulta Médica Respiratoria (IRA, SBO, Asma, EPOC)",
+      "terminos_busqueda": [
+        "ira",
+        "infeccion respiratoria",
+        "resfrío",
+        "resfrio",
+        "bronquitis",
+        "sbo",
+        "asma",
+        "epoc",
+        "consulta respiratoria",
+        "neumonia",
+        "neumonía",
+        "faringitis",
+        "otitis"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección A",
+        "pagina": "91"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección A: Consultas médicas",
+        "serie": "IRA Alta / SBO / Neumonía / Exacerbación Asma / EPOC / Otras respiratorias",
+        "columnas": "Col. por rango etario y sexo. Columna especial para Campaña de Invierno si aplica",
+        "descripcion": "Seleccionar la categoría respiratoria correcta. Las IRA Alta incluyen: resfrío, faringitis, amigdalitis, sinusitis, otitis media. El SBO incluye bronquitis obstructiva. Registrar en columna 'Campaña de Invierno' solo si la consulta es con horas de refuerzo ministerial."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-010-a",
+          "pestaña_destino": "REM A23",
+          "seccion_destino": "Sala IRA-ERA",
+          "mensaje": "Si el paciente fue derivado a Sala IRA-ERA, el kinesiólogo que realice procedimientos debe registrarlos en REM A23, no en REM A04.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-011",
+      "prestacion": "Consulta Médica de Salud Mental",
+      "terminos_busqueda": [
+        "consulta salud mental",
+        "morbilidad salud mental",
+        "consulta psiquiatria",
+        "depresion",
+        "ansiedad",
+        "sospecha salud mental",
+        "derivacion salud mental"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección A",
+        "pagina": "91"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección A: Consultas médicas - Salud Mental",
+        "serie": "Consultas por sospecha de trastornos de Salud Mental para derivación a programa",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Registrar la consulta médica cuando el motivo es sospecha de trastorno de salud mental o derivación a programa. Si el médico ya lleva el seguimiento del paciente en salud mental, usar categoría correspondiente."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-011-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección N: Ingresos al Programa de Salud Mental APS/Especialidad",
+          "mensaje": "Si en la consulta se decide ingresar al paciente al programa de Salud Mental (PASM), registrar el ingreso en REM A05 sección N.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-011-b",
+          "pestaña_destino": "REM A06",
+          "seccion_destino": "Sección A: Atenciones médicas en Programa de Salud Mental APS",
+          "mensaje": "Si el paciente ya está en programa de Salud Mental, sus controles médicos van en REM A06, no en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-012",
+      "prestacion": "Consulta de Enfermería - Morbilidad",
+      "terminos_busqueda": [
+        "consulta enfermeria",
+        "consulta enfermería",
+        "morbilidad enfermería",
+        "morbilidad enfermeria",
+        "atencion enfermeria",
+        "atención enfermería",
+        "box enfermeria"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Enfermera(o)",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Registrar la consulta de morbilidad realizada por Enfermero/a: evaluación, diagnóstico de enfermería, plan de acción y registro. Incluye anamnesis y examen físico."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-012-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales de personas con condiciones crónicas",
+          "mensaje": "Si la consulta de enfermería corresponde a un control integral de una persona crónica (G1, G2, G3), también debe registrarse en REM A01 sección F.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-013",
+      "prestacion": "Consulta de Matrona - Ginecológica / Obstétrica",
+      "terminos_busqueda": [
+        "consulta matrona",
+        "consulta matrón",
+        "morbilidad matrona",
+        "ginecologica matrona",
+        "consulta ginecologica",
+        "consulta obstétrica",
+        "obstétrica matrona"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Matrón(a): ginecológica / obstétrica / ITS / infertilidad / salud sexual / piso pélvico",
+        "columnas": "Col. por tipo de consulta, rango etario y sexo",
+        "descripcion": "Seleccionar el tipo correcto: morbilidad ginecológica (patología ginecológica), obstétrica (síntomas de patología en embarazo), ITS, infertilidad, salud sexual u otras. Cada tipo tiene su propia columna."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-013-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control prenatal",
+          "mensaje": "Si fue un control prenatal de rutina (no morbilidad), registrar en REM A01 sección A, no en REM A04. La consulta obstétrica de morbilidad va en A04, el control prenatal preventivo va en A01.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Matronería"
+      ]
+    },
+    {
+      "id": "rem-014",
+      "prestacion": "Consulta de Nutricionista",
+      "terminos_busqueda": [
+        "consulta nutricion",
+        "consulta nutrición",
+        "nutricionista",
+        "consulta nutricional",
+        "obesidad consulta",
+        "sobrepeso consulta",
+        "malnutricion",
+        "malnutrición"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta Nutricionista: malnutrición por exceso / malnutrición por déficit / otras consultas",
+        "columnas": "Col. por tipo y rango etario",
+        "descripcion": "Clasificar correctamente: 'malnutrición por exceso' para sobrepeso y obesidad, 'malnutrición por déficit' para desnutrición y riesgo de desnutrir, 'otras consultas' para trastornos alimentarios, alergias, intolerancias, o IMC normal."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-014-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección K: Clasificación de consulta nutricional por rango etario",
+          "mensaje": "Las consultas de nutricionista deben ser consistentes con la sección K del mismo REM A04, que desagrega las consultas nutricionales por rango etario específico.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Nutrición"
+      ]
+    },
+    {
+      "id": "rem-015",
+      "prestacion": "Consulta de Psicólogo/a",
+      "terminos_busqueda": [
+        "consulta psicologo",
+        "consulta psicólogo",
+        "psicologo",
+        "psicología",
+        "psicologia",
+        "consulta psicologica",
+        "atención psicológica",
+        "atencion psicologica"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Psicólogo(a)",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "La consulta de psicólogo en REM A04 es para personas que requieren orientación psicológica o están en alto riesgo de trastorno de salud mental pero NO han sido ingresadas al programa de salud mental (PASM)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-015-a",
+          "pestaña_destino": "REM A06",
+          "seccion_destino": "Sección A: Atenciones en Programa de Salud Mental APS",
+          "mensaje": "Si el paciente ya está ingresado al programa de Salud Mental, sus consultas con psicólogo van en REM A06, NO en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-016",
+      "prestacion": "Consulta de Kinesiólogo/a",
+      "terminos_busqueda": [
+        "consulta kinesiologo",
+        "consulta kinesiólogo",
+        "kinesiologo",
+        "kinesiología",
+        "kinesiologia",
+        "rehabilitacion kinesiologia",
+        "procedimiento kinesiologo",
+        "sesion kinesiologia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Kinesiólogo (No SAPU): sesiones de procedimientos",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Registrar las sesiones de procedimientos de kinesiología por prescripción médica. Importante: NO registrar aquí si se realizó en Sala IRA-ERA (va en REM A23) o en sala de rehabilitación (va en REM A28)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-016-a",
+          "pestaña_destino": "REM A23",
+          "seccion_destino": "Sala IRA-ERA: Procedimientos de kinesiólogo",
+          "mensaje": "Procedimientos de kinesiólogo en Sala IRA o ERA: registrar en REM A23, no en REM A04.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-016-b",
+          "pestaña_destino": "REM A28",
+          "seccion_destino": "Sección A: Atenciones de Rehabilitación",
+          "mensaje": "Procedimientos de kinesiólogo en sala de rehabilitación o programa de rehabilitación: registrar en REM A28, no en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-017",
+      "prestacion": "Ingreso al Programa de Salud Cardiovascular - HTA",
+      "terminos_busqueda": [
+        "ingreso hta",
+        "ingreso hipertension",
+        "hipertensión ingreso",
+        "pscv ingreso",
+        "ingreso cardiovascular hta",
+        "primer control hta",
+        "hta nueva",
+        "hipertension arterial nueva"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección H",
+        "pagina": "132"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección H: Ingresos al Programa de Salud Cardiovascular (PSCV)",
+        "serie": "Ingresos por diagnóstico: HTA / DM2 / Dislipidemia / ERC / Tabaquismo / ACV-IAM / Obesidad",
+        "columnas": "Col. por diagnóstico principal, rango etario y sexo",
+        "descripcion": "Registrar SOLO el primer ingreso al PSCV. Una persona se registra una sola vez. Seleccionar el diagnóstico principal que motiva el ingreso."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-017-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A: Consultas médicas - Cardiovascular",
+          "mensaje": "OBLIGATORIO: La consulta médica que generó el diagnóstico y el ingreso al PSCV debe registrarse en REM A04 sección A como consulta cardiovascular. Sin esta consulta, el ingreso queda estadísticamente sin origen.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-017-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección C: Controles según problema de salud - Cardiovascular",
+          "mensaje": "A partir del ingreso, los controles cardiovasculares de seguimiento se registran en REM A01 sección C como 'Control de Salud Cardiovascular'.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-018",
+      "prestacion": "Control de Salud Cardiovascular (HTA, DM, Dislipidemia) - Seguimiento",
+      "terminos_busqueda": [
+        "control cardiovascular",
+        "control hta",
+        "control dm",
+        "control diabetes",
+        "control dislipidemia",
+        "control pscv",
+        "control cronico cardiovascular",
+        "seguimiento cardiovascular"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección C",
+        "pagina": "36"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección C: Controles según problema de salud",
+        "serie": "Control de Salud Cardiovascular",
+        "columnas": "Col. por rango etario, sexo y profesional",
+        "descripcion": "Cada control de seguimiento de paciente en PSCV (HTA, DM2, dislipidemia, etc.) se registra aquí. Aplica para controles médicos y no médicos (enfermería, nutricionista)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-018-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales de personas con condiciones crónicas",
+          "mensaje": "Si el control fue un 'Control Integral' con plan de cuidados consensuado (ECICEP), también registrarlo en sección F del REM A01. El control integral va en ambas secciones.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Nutrición"
+      ]
+    },
+    {
+      "id": "rem-019",
+      "prestacion": "Ingreso al Programa de Salud Mental (PASM)",
+      "terminos_busqueda": [
+        "ingreso salud mental",
+        "ingreso pasm",
+        "programa salud mental",
+        "ingreso depresion",
+        "ingreso ansiedad",
+        "ingreso psiquiatria",
+        "pasm ingreso",
+        "salud mental programa"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección N",
+        "pagina": "139"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección N: Ingresos al Programa de Salud Mental APS/Especialidad",
+        "serie": "Por diagnóstico: Depresión / Esquizofrenia / Trastorno Bipolar / Consumo perjudicial / Demencia / Otros",
+        "columnas": "Col. por diagnóstico, rango etario y sexo",
+        "descripcion": "Registrar el primer ingreso al programa de salud mental. Una vez ingresado, los controles van en REM A06."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-019-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A o B: Consulta médica o de psicólogo",
+          "mensaje": "La consulta que originó el ingreso al PASM debe estar registrada en REM A04 (consulta médica o de psicólogo). El ingreso al programa sin la consulta de origen es estadísticamente inconsistente.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-019-b",
+          "pestaña_destino": "REM A06",
+          "seccion_destino": "Sección A: Atenciones en Programa de Salud Mental",
+          "mensaje": "A partir del ingreso, todos los controles y atenciones de salud mental van en REM A06.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-020",
+      "prestacion": "Control en Programa de Salud Mental (PASM)",
+      "terminos_busqueda": [
+        "control salud mental",
+        "control pasm",
+        "control depresion",
+        "control ansiedad",
+        "seguimiento salud mental",
+        "consulta pasm",
+        "atencion salud mental programa"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A06",
+        "pagina": "165"
+      },
+      "registro_principal": {
+        "pestaña": "REM A06",
+        "seccion": "Sección A: Programa de Salud Mental Atención Primaria",
+        "serie": "Por tipo de atención y profesional (médico, psicólogo, enfermera, trabajador social, etc.)",
+        "columnas": "Col. por diagnóstico, profesional, rango etario y sexo",
+        "descripcion": "Todas las atenciones a pacientes ingresados al PASM van aquí. Incluye consultas médicas, psicológicas, de enfermería y trabajo social dentro del programa."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-020-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales de personas con condiciones crónicas",
+          "mensaje": "Si el control de salud mental fue un 'Control Integral' (revisión plan de cuidados, estratificación de riesgo), también registrarlo en REM A01 sección F. Ambos registros son válidos y necesarios.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Psicología",
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-021",
+      "prestacion": "PAP / VPH - Toma de muestra",
+      "terminos_busqueda": [
+        "pap",
+        "papanicolau",
+        "vph",
+        "vih vph",
+        "cancer cervicouterino",
+        "tamizaje cervical",
+        "citologia",
+        "colposcopia",
+        "papanicolaou",
+        "cancer cuello uterino",
+        "vph autotoma"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Secciones G y H",
+        "pagina": "41"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección G: Programa Cáncer Cuello Uterino - PAP tomados e informados (uso APS)",
+        "serie": "PAP tomado e informado por resultado (Normal, Inadecuado, Atípico, Positivo) y rango etario",
+        "columnas": "Col. por resultado, rango etario y NUEVA COLUMNA: Total de exámenes tamizaje priorizado",
+        "descripcion": "Registrar el PAP en el mes que se INFORMA el resultado (no en el mes que se tomó). Si se tomó VPH, registrar en Sección H del mismo REM A01. IMPORTANTE (Mod V1.2): En sección H de VPH se debe registrar también en la columna 'Total de exámenes tamizaje priorizado' si corresponde."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-021-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control ginecológico",
+          "mensaje": "Si el PAP se tomó durante un control ginecológico, ese control debe estar registrado en REM A01 sección A. La toma de PAP es un procedimiento del control, no reemplaza el registro del control.",
+          "criticidad": "media"
+        },
+        {
+          "id": "cruce-021-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección H: VPH tomados e informados",
+          "mensaje": "Si se tomó VPH (en lugar de o además del PAP), registrar en sección H del REM A01. VPH autotoma tiene sus propias columnas en sección H.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-022",
+      "prestacion": "Control Ginecológico / Climaterio",
+      "terminos_busqueda": [
+        "control ginecologico",
+        "control ginecológico",
+        "ginecologia",
+        "climaterio",
+        "control climaterio",
+        "menopausia",
+        "control mujer",
+        "salud mujer",
+        "mrs"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección A y REM A05 Sección D",
+        "pagina": "32"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección A: Controles de salud sexual y reproductiva",
+        "serie": "Control Ginecológico / Control del Climaterio",
+        "columnas": "Col. por rango etario y profesional (Médico o Matrón/a)",
+        "descripcion": "El control ginecológico es desde los 10 años. El control de climaterio es para mujeres de 40-64 años con aplicación de pauta MRS. Si es el primer control de climaterio, además registrar el ingreso en REM A05 sección D."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-022-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección D: Ingresos a Programa Control de Climaterio",
+          "mensaje": "Si es el PRIMER control de climaterio de la usuaria en el establecimiento, registrar su ingreso al programa en REM A05 sección D (mujeres 45-64 años).",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-023",
+      "prestacion": "Ingreso / Control por ITS (Infección de Transmisión Sexual)",
+      "terminos_busqueda": [
+        "its",
+        "infeccion transmision sexual",
+        "infección transmisión sexual",
+        "sifilis",
+        "sífilis",
+        "gonorrea",
+        "clamidia",
+        "control its",
+        "programa its",
+        "vih its"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección Q y REM A01 Sección C",
+        "pagina": "148"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección Q: Ingresos y egresos a Programa Infección por Transmisión Sexual",
+        "serie": "Ingresos por tipo de ITS: Sífilis / Gonorrea / Clamidia / VIH / Otras ITS",
+        "columnas": "Col. por diagnóstico, rango etario y sexo",
+        "descripcion": "Registrar el ingreso al programa de ITS cuando se confirma el diagnóstico. Los controles de seguimiento van en REM A01 sección C como 'Control de ITS'."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-023-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A: Consultas médicas - ITS / Sección B: Consulta de Matrón(a) - ITS",
+          "mensaje": "La consulta que generó el diagnóstico de ITS debe estar en REM A04. Sin la consulta de origen, el ingreso al programa es estadísticamente inconsistente.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-023-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección C: Control de ITS",
+          "mensaje": "Los controles de seguimiento de ITS van en REM A01 sección C. Asegúrate de no volver a registrar el ingreso en A05 en cada control.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-024",
+      "prestacion": "Curación Simple",
+      "terminos_busqueda": [
+        "curacion simple",
+        "curación simple",
+        "curación herida",
+        "curacion herida",
+        "herida simple",
+        "apósito simple",
+        "cambio aposito",
+        "cura herida"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B o REM A09",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Procedimientos de Enfermería / TENS",
+        "columnas": "Col. por profesional, rango etario y sexo",
+        "descripcion": "La curación simple se registra como procedimiento de enfermería. Diferencia claramente curación simple (heridas superficiales, postoperatorias limpias) de curación avanzada (úlceras crónicas, heridas complejas)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-024-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A: Consulta médica o B: Consulta de enfermería",
+          "mensaje": "Si la curación fue resultado de una consulta de morbilidad (no derivación directa), la consulta que la originó debe estar registrada en sección A o B del mismo REM A04.",
+          "criticidad": "baja"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "TENS",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-025",
+      "prestacion": "Curación Avanzada (Úlcera o Herida Compleja)",
+      "terminos_busqueda": [
+        "curacion avanzada",
+        "curación avanzada",
+        "ulcera",
+        "úlcera",
+        "herida compleja",
+        "pie diabetico",
+        "pie diabético",
+        "ulcera venosa",
+        "ulcera arterial",
+        "herida cronica",
+        "herida crónica"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Curación Avanzada (diferenciada de curación simple en el Excel)",
+        "columnas": "Col. por profesional y rango etario",
+        "descripcion": "La curación avanzada corresponde a heridas complejas: úlceras crónicas (venosas, arteriales, diabéticas), heridas de mayor complejidad con uso de apósitos avanzados. Tiene mayor puntaje MAI que la curación simple."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-025-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección H o Sección I: PSCV - Paciente diabético",
+          "mensaje": "Si el paciente con úlcera es diabético y la herida es en extremidad inferior (pie diabético), verificar que el paciente esté en PSCV y que sus controles estén al día en REM A01 sección C.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-026",
+      "prestacion": "Inyectología / Administración de Medicamentos",
+      "terminos_busqueda": [
+        "inyectologia",
+        "inyectología",
+        "inyección",
+        "inyeccion",
+        "administracion medicamento",
+        "administración medicamento",
+        "intramuscular",
+        "intravenosa",
+        "subcutánea",
+        "subcutanea"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Procedimientos de Enfermería / TENS: Inyectología",
+        "columnas": "Col. por profesional y rango etario",
+        "descripcion": "Registrar cada administración de medicamento parenteral (IM, IV, SC) como procedimiento de enfermería."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Enfermería",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-027",
+      "prestacion": "Vacunación",
+      "terminos_busqueda": [
+        "vacuna",
+        "vacunacion",
+        "vacunación",
+        "inmunizacion",
+        "inmunización",
+        "influenza",
+        "neumococo",
+        "covid",
+        "difteria",
+        "tetanos",
+        "tetanos",
+        "hepatitis b",
+        "srp",
+        "vacuna escolar",
+        "pan vacunas"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 (uso APS)",
+        "pagina": "233"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección correspondiente según tipo de vacuna",
+        "serie": "Por nombre de vacuna, grupo objetivo y número de dosis (1ª, 2ª, refuerzo)",
+        "columnas": "Col. por grupo etario objetivo y tipo de dosis",
+        "descripcion": "Cada dosis aplicada se registra en la sección de su vacuna específica. Identificar correctamente el grupo objetivo (lactante, preescolar, escolar, adolescente, adulto mayor, embarazada, funcionario)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-027-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control prenatal",
+          "mensaje": "Si la vacuna se aplicó durante un control prenatal (dTpa, Influenza), asegurarse de que el control prenatal esté registrado en REM A01 sección A.",
+          "criticidad": "baja"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-028",
+      "prestacion": "Control Adulto Mayor con Seguimiento de Funcionalidad",
+      "terminos_busqueda": [
+        "autovalente riesgo",
+        "control adulto mayor",
+        "seguimiento adulto mayor",
+        "dependencia adulto mayor",
+        "adulto mayor control",
+        "seguimiento funcionalidad",
+        "programa adulto mayor"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección C y REM A05 Sección K",
+        "pagina": "36"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección C: Controles según problema de salud",
+        "serie": "Seguimiento Autovalente con Riesgo / Seguimiento Riesgo Dependencia",
+        "columnas": "Col. por profesional, rango etario y sexo",
+        "descripcion": "Para adultos mayores clasificados como 'Autovalente con Riesgo' o 'En Riesgo de Dependencia' en el EMPAM. Son controles de seguimiento del plan de atención definido en el EMPAM."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-028-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección K: Ingresos al Programa del Adulto Mayor según funcionalidad",
+          "mensaje": "Si el adulto mayor no está ingresado al programa, primero registrar su ingreso en REM A05 sección K con su clasificación de funcionalidad (autovalente, autovalente con riesgo, dependiente).",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-029",
+      "prestacion": "NANEAS - Niño/a con Necesidades Especiales de Atención",
+      "terminos_busqueda": [
+        "naneas",
+        "necesidades especiales",
+        "niño especial",
+        "nino especial",
+        "control naneas",
+        "discapacidad infantil",
+        "desarrollo especial",
+        "necesidades especiales atencion"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección B y REM A05 Sección G",
+        "pagina": "35"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección B: Controles de salud según ciclo vital",
+        "serie": "Control de NANEAS (incluido en los controles de salud según rango etario)",
+        "columnas": "Col. por rango etario correspondiente",
+        "descripcion": "Los controles de salud a NANEAS deben registrarse y estar CONTENIDOS en el REM A01 sección B (regla del manual). No tienen una sección separada en A01."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-029-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección G: Ingreso de niños/as con necesidades especiales",
+          "mensaje": "Si es el primer control del niño/a con necesidades especiales en el establecimiento, registrar el ingreso en REM A05 sección G.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-030",
+      "prestacion": "Visita Domiciliaria",
+      "terminos_busqueda": [
+        "visita domiciliaria",
+        "visita domicilio",
+        "vd salud",
+        "vd enfermería",
+        "vd enfermerìa",
+        "domicilio",
+        "atención domicilio",
+        "visita en casa"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A26",
+        "pagina": "447"
+      },
+      "registro_principal": {
+        "pestaña": "REM A26",
+        "seccion": "Sección A: Actividades en domicilio y en otros espacios",
+        "serie": "Por tipo de visita (integral, seguimiento, técnica) y profesional",
+        "columnas": "Col. por tipo de actividad, profesional y rango etario",
+        "descripcion": "Registrar cada visita domiciliaria según tipo: integral (evaluación completa), de seguimiento (monitoreo de condición) o técnica (curaciones, inyecciones, toma de muestras en domicilio)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-030-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección W: Programa atención domiciliaria personas con dependencia severa",
+          "mensaje": "Si la visita es para un paciente con dependencia severa inscrito en el programa de atención domiciliaria, también registrar en REM A05 sección W.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional",
+        "Odontología",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-031",
+      "prestacion": "Control Integral de Personas con Condiciones Crónicas (ECICEP)",
+      "terminos_busqueda": [
+        "control integral",
+        "ecicep",
+        "cronico integral",
+        "control integrado",
+        "plan cuidados",
+        "estratificacion riesgo",
+        "g1 g2 g3",
+        "riesgo leve moderado alto"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A01 Sección F y REM A05 Sección U",
+        "pagina": "39"
+      },
+      "registro_principal": {
+        "pestaña": "REM A01",
+        "seccion": "Sección F: Controles Integrales de personas con condiciones crónicas",
+        "serie": "Por nivel de estratificación: G1 (riesgo leve) / G2 (riesgo moderado) / G3 (riesgo alto)",
+        "columnas": "Col. por estratificación, rango etario y sexo",
+        "descripcion": "Registrar el control integral cuando se realiza revisión y actualización del plan de cuidados consensuado (ECICEP). IMPORTANTE: estos controles también deben estar registrados en las secciones B, C del REM A01 o en REM A06/A09/A23 según programa."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-031-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Secciones B y C: Controles de salud y controles por problema de salud",
+          "mensaje": "OBLIGATORIO (Regla R.2): Los controles integrales de sección F deben estar incluidos en las secciones B y/o C del REM A01, o en REM A06 (Salud Mental), A09 (Salud Bucal) o A23 (IRA-ERA). Son registros que deben cuadrar.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-031-b",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección U: Ingresos integrales de personas con condiciones crónicas",
+          "mensaje": "Si es el primer ingreso integral de la persona al sistema ECICEP, registrar el ingreso en REM A05 sección U.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Nutrición",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-032",
+      "prestacion": "Consulta de Morbilidad Odontológica",
+      "terminos_busqueda": [
+        "consulta dental",
+        "consulta odontologica",
+        "consulta odontológica",
+        "morbilidad dental",
+        "morbilidad odontológica",
+        "dolor muela",
+        "dolor dental",
+        "caries",
+        "odontología"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección A",
+        "pagina": "235"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección A: Consultas y controles odontología general",
+        "serie": "Consulta de Morbilidad Odontológica",
+        "columnas": "Col. por rango etario, sexo, 12 años, gestante, 60 años, SENAME, migrantes, discapacidad, ingreso integral y condición crónica",
+        "descripcion": "Registrar cada sesión de consulta de morbilidad odontológica. El detalle de las actividades (obturaciones, exodoncias, etc.) se registra en la sección B del mismo REM A09."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-032-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección B: Actividades odontológicas realizadas",
+          "mensaje": "OBLIGATORIO: Las actividades realizadas durante la consulta (obturaciones, exodoncias, sellantes, destartraje, etc.) se registran por SEPARADO en sección B. La consulta en sección A + las actividades en sección B son registros complementarios.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-032-b",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección C: Ingresos a tratamiento odontología general",
+          "mensaje": "Si es la primera consulta del paciente y se inicia tratamiento, registrar el INGRESO a tratamiento en sección C (incluye registro de COPD/Ceo-d, N° dientes y EPB si es mayor de 15 años).",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-033",
+      "prestacion": "Urgencia Odontológica Ambulatoria (GES)",
+      "terminos_busqueda": [
+        "urgencia dental",
+        "urgencia odontologica",
+        "urgencia odontológica",
+        "ges dental",
+        "ges odontológica",
+        "absceso dental",
+        "dolor dental urgencia",
+        "flemon",
+        "flegmón"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección A",
+        "pagina": "235"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección A: Consulta de urgencia (GES)",
+        "serie": "Urgencia Odontológica Ambulatoria GES",
+        "columnas": "Col. por rango etario, sexo, gestante, discapacidad, migrantes",
+        "descripcion": "Registrar cada consulta de urgencia dental GES. Los procedimientos realizados (drenaje de absceso, exodoncia, medicación) se registran en sección B como 'Procedimiento Médico Quirúrgico'."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-033-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección B: Procedimientos Médico Quirúrgicos",
+          "mensaje": "Los procedimientos de la urgencia (drenaje, sutura, ferulización, prescripción AINE/antibioterapia) se registran en sección B. No incluir exodoncia ni acceso cavitario aquí, esos tienen sus propias filas en sección B.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-034",
+      "prestacion": "Control Odontológico / Control CERO",
+      "terminos_busqueda": [
+        "control dental",
+        "control odontologico",
+        "control odontológico",
+        "cero dental",
+        "control cero",
+        "enfoque riesgo odontologico",
+        "control salud oral"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección A",
+        "pagina": "235"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección A: Control Odontológico / Control con enfoque de riesgo odontológico (CERO)",
+        "serie": "Control Odontológico y Control Programa CERO",
+        "columnas": "Col. por rango etario, sexo, gestante, persona con ingreso integral y condición crónica",
+        "descripcion": "El control CERO es para niños, niñas y adolescentes que ingresan al programa de prevención. El control odontológico integral es para adultos de 20+ años. Incluye evaluación del estado oral, refuerzo educativo y prevención."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-034-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección C: Ingreso Control CERO",
+          "mensaje": "Si es el PRIMER control CERO del niño/a, registrar el ingreso a control CERO en sección C del REM A09.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-034-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales personas con condiciones crónicas",
+          "mensaje": "Si el paciente tiene ingreso integral y condición crónica (G1-G3), marcar la columna correspondiente en REM A09 y verificar que también esté registrado en REM A01 sección F.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-035",
+      "prestacion": "Alta Odontológica Integral",
+      "terminos_busqueda": [
+        "alta dental",
+        "alta odontologica",
+        "alta odontológica",
+        "alta integral dental",
+        "alta integral odontologica",
+        "egreso dental",
+        "fin tratamiento dental"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección C",
+        "pagina": "241"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección C: Altas odontológicas integrales",
+        "serie": "Altas por persona (no por actividad). Solo 1 alta por persona por año calendario",
+        "columnas": "Col. por rango etario, sexo, gestante, 12 años, 60 años",
+        "descripcion": "El alta integral se otorga cuando el paciente termina su tratamiento completo (examen, diagnóstico, prevención, recuperación). Solo se puede registrar UN alta por persona por año calendario. Incluye altas preventivas."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-035-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección C: Ingresos a tratamiento",
+          "mensaje": "OBLIGATORIO (Regla R.1): Las altas totales deben ser consistentes con los ingresos a tratamiento. Si hay diferencia, justificar como abandonos o tratamientos que continúan de un período a otro.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-035-b",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección G: Programas especiales GES",
+          "mensaje": "Si el alta corresponde a GES embarazada o GES 60 años con tratamiento de reforzamiento, registrar el alta en sección G (no en sección C). Altas preventivas de GES 60 años SÍ van en sección C.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-036",
+      "prestacion": "Actividades Odontológicas (Obturaciones, Exodoncias, Sellantes, etc.)",
+      "terminos_busqueda": [
+        "obturacion",
+        "obturación",
+        "exodoncia",
+        "sellante",
+        "destartraje",
+        "fluoracion",
+        "fluoración",
+        "endodoncia",
+        "amalgama",
+        "restauracion",
+        "restauración",
+        "composite",
+        "pulpotomia",
+        "pulpectomia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección B",
+        "pagina": "237"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección B: Actividades de odontología general",
+        "serie": "Por tipo: Educación individual, Examen salud oral, Sellantes, Fluoración barniz, Destartraje, Exodoncia, Restauración estética, Obturación, Endodoncia, Radiografía, etc.",
+        "columnas": "Col. por tipo de actividad, rango etario, sexo, gestante, 12 años, 60 años",
+        "descripcion": "CADA actividad se registra por separado: sellantes por diente sellado, obturaciones por diente obturado, exodoncias por diente extraído, destartraje por sesión, fluoración por sesión. Estos registros van ADEMÁS de la consulta registrada en sección A."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-036-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección A: Consulta de morbilidad o Control odontológico",
+          "mensaje": "Las actividades de sección B siempre deben tener asociada una consulta o control en sección A. No puede haber actividades sin la atención que las origina.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-037",
+      "prestacion": "Ingreso Agudo a Sala IRA / ERA / Mixta",
+      "terminos_busqueda": [
+        "sala ira",
+        "sala era",
+        "sala mixta",
+        "ingreso ira",
+        "ingreso era",
+        "ira agudo",
+        "bronquitis sala",
+        "neumonia sala",
+        "kinesiologo sala",
+        "crisis respiratoria"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A23 Sección A",
+        "pagina": "378"
+      },
+      "registro_principal": {
+        "pestaña": "REM A23",
+        "seccion": "Sección A: Ingresos agudos según diagnóstico derivados a sala",
+        "serie": "IRA Alta / Influenza / Neumonía / Coqueluche / Bronquitis Obstructiva Aguda / Exacerbación SBO / Exacerbación Asma / Exacerbación EPOC / Otras IRA bajas",
+        "columnas": "Col. por diagnóstico de derivación, rango etario, sexo, campaña de invierno",
+        "descripcion": "Registrar cada paciente que ingresa por primera vez en el mes derivado del médico por un cuadro respiratorio agudo. Si tiene más de un diagnóstico, usar el más grave. Un mismo paciente puede tener más de un ingreso al mes si son cuadros DISTINTOS."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-037-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A: Consulta médica respiratoria (IRA, SBO, Neumonía, etc.)",
+          "mensaje": "OBLIGATORIO: El paciente ingresado a sala IRA-ERA DEBE tener una consulta médica de morbilidad registrada en REM A04 sección A, ya que es el médico quien lo deriva. Sin esa consulta, el ingreso a sala no tiene origen.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-037-b",
+          "pestaña_destino": "REM A23",
+          "seccion_destino": "Sección I: Procedimientos realizados (NBZ, KTR, etc.)",
+          "mensaje": "Los procedimientos de kinesiólogo en sala (nebulizaciones, kinesioterapia respiratoria, aspiraciones, etc.) se registran en sección I del mismo REM A23. NO en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-038",
+      "prestacion": "Ingreso Crónico a Programa Respiratorio (Asma, EPOC, SBO Recurrente)",
+      "terminos_busqueda": [
+        "ingreso cronico respiratorio",
+        "ingreso asma",
+        "ingreso epoc",
+        "ingreso sbo recurrente",
+        "programa respiratorio cronico",
+        "cronico respiratorio sala"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A23 Sección B",
+        "pagina": "378"
+      },
+      "registro_principal": {
+        "pestaña": "REM A23",
+        "seccion": "Sección B: Ingreso crónico según diagnóstico (solo médico)",
+        "serie": "SBO Recurrente / Asma / EPOC / Fibrosis Quística / Otras crónicas / Reingreso",
+        "columnas": "Col. por diagnóstico, rango etario, sexo",
+        "descripcion": "SOLO el médico puede ingresar pacientes crónicos al programa respiratorio. El ingreso a SIGGES es obligatorio. Si el paciente abandonó y vuelve, usar columna 'Reingreso' (incluido en el total por edad y sexo)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-038-a",
+          "pestaña_destino": "REM A23",
+          "seccion_destino": "Sección E: Controles realizados (crónicos)",
+          "mensaje": "Una vez ingresado, los controles crónicos se registran en sección E del mismo REM A23, no en REM A01.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-038-b",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales personas con condiciones crónicas",
+          "mensaje": "Si el paciente crónico respiratorio recibe un control integral (ECICEP), ese control TAMBIÉN debe registrarse en REM A01 sección F, además de sección E de REM A23.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-039",
+      "prestacion": "Control Crónico Respiratorio en Sala IRA-ERA",
+      "terminos_busqueda": [
+        "control asma",
+        "control epoc",
+        "control cronico respiratorio",
+        "control sala ira",
+        "control sala era",
+        "seguimiento asma",
+        "seguimiento epoc",
+        "control respiratorio cronico"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A23 Sección E",
+        "pagina": "378"
+      },
+      "registro_principal": {
+        "pestaña": "REM A23",
+        "seccion": "Sección E: Controles realizados (crónicos)",
+        "serie": "Por diagnóstico crónico y profesional (médico, kinesiólogo, enfermera)",
+        "columnas": "Col. por diagnóstico, profesional, rango etario, sexo",
+        "descripcion": "Registrar cada control de paciente crónico respiratorio bajo control del programa. Los controles médicos Y de kinesiólogo se registran aquí."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-039-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección F: Controles integrales personas con condiciones crónicas",
+          "mensaje": "Si el control cumple criterios de 'Control Integral' (ECICEP) para un paciente crónico estratificado (G1-G3), registrar TAMBIÉN en REM A01 sección F.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-040",
+      "prestacion": "Procedimientos en Sala IRA-ERA (NBZ, KTR, Aspiración)",
+      "terminos_busqueda": [
+        "nebulizacion",
+        "nebulización",
+        "kinesioterapia respiratoria",
+        "ktr",
+        "aspiracion",
+        "aspiración",
+        "aerosolterapia",
+        "inhaloterapia",
+        "sbt inhalado",
+        "procedimiento sala ira",
+        "procedimiento sala era"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A23 Sección I",
+        "pagina": "378"
+      },
+      "registro_principal": {
+        "pestaña": "REM A23",
+        "seccion": "Sección I: Procedimientos realizados",
+        "serie": "Nebulización / Kinesioterapia respiratoria / Aspiración de secreciones / Educación / Otros",
+        "columnas": "Col. por tipo de procedimiento, rango etario, sexo",
+        "descripcion": "CADA procedimiento se registra aquí, no en REM A04. Si un paciente recibe 3 nebulizaciones en una visita, registrar 3 procedimientos. Los procedimientos realizados por kinesiólogo en sala IRA-ERA siempre van en REM A23."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-040-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección B: Consulta de Kinesiólogo",
+          "mensaje": "NO registrar procedimientos de kinesiólogo de sala IRA-ERA en REM A04. Los procedimientos de sala van EXCLUSIVAMENTE en REM A23 sección I.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Kinesiología",
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-041",
+      "prestacion": "Atención de Urgencia (SAPU / SUR / SAR)",
+      "terminos_busqueda": [
+        "urgencia",
+        "sapu",
+        "sur",
+        "sar",
+        "urgencia aps",
+        "servicio urgencia",
+        "atencion urgencia",
+        "atención urgencia",
+        "triage",
+        "categorizacion urgencia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A08",
+        "pagina": "203"
+      },
+      "registro_principal": {
+        "pestaña": "REM A08",
+        "seccion": "Sección A: Atenciones de urgencia por profesional y diagnóstico",
+        "serie": "Por categorización (C1-C5), diagnóstico y profesional",
+        "columnas": "Col. por categorización, tipo de diagnóstico (respiratorio, cardiovascular, trauma, etc.), rango etario, sexo",
+        "descripcion": "Registrar CADA atención de urgencia con su categorización (C1 a C5), tipo de diagnóstico y profesional que atendió. Las atenciones del SAPU/SUR/SAR van aquí, no en REM A04."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-041-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección A: Consultas médicas",
+          "mensaje": "Las atenciones de urgencia del SAPU/SUR van en REM A08, NO en REM A04. Solo las consultas de morbilidad programada de APS van en A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-042",
+      "prestacion": "Educación Grupal para la Salud",
+      "terminos_busqueda": [
+        "educacion grupal",
+        "educación grupal",
+        "taller salud",
+        "charla salud",
+        "educacion salud",
+        "educación para la salud",
+        "actividad educativa",
+        "grupo educativo",
+        "taller grupal"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A27",
+        "pagina": "461"
+      },
+      "registro_principal": {
+        "pestaña": "REM A27",
+        "seccion": "Educación para la Salud: Sesiones educativas grupales",
+        "serie": "Por tema educativo (alimentación, actividad física, salud mental, sexual, autocuidado, etc.) y profesional",
+        "columnas": "Col. por tema, profesional, N° sesiones, N° asistentes",
+        "descripcion": "Registrar cada sesión educativa grupal realizada. Diferenciar por tema y contar tanto las sesiones como el número de asistentes."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional",
+        "Educación Párvulos",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-043",
+      "prestacion": "Exámenes de Pesquisa (VIH, Sífilis, Hepatitis B, Glicemia, Mamografía)",
+      "terminos_busqueda": [
+        "examen pesquisa",
+        "test vih",
+        "test sifilis",
+        "test sífilis",
+        "mamografia",
+        "mamografía",
+        "glicemia",
+        "hemoglobina glicosilada",
+        "examen screening",
+        "tamizaje",
+        "hepatitis b test"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A11",
+        "pagina": "272"
+      },
+      "registro_principal": {
+        "pestaña": "REM A11",
+        "seccion": "Exámenes de pesquisa de enfermedades",
+        "serie": "Por tipo de examen: VIH / Sífilis / Hepatitis B / Glicemia / Mamografía / Otros",
+        "columnas": "Col. por tipo de examen, resultado, rango etario, sexo",
+        "descripcion": "Registrar CADA examen de pesquisa solicitado y su resultado cuando esté disponible. Si el examen se solicita en el EMP, el resultado se registra en el mes en que se obtiene."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-043-a",
+          "pestaña_destino": "REM A02",
+          "seccion_destino": "Sección D: Resultados de EMP según estado de salud (exámenes de laboratorio)",
+          "mensaje": "Si el examen de pesquisa fue solicitado durante un EMP/EMPAM (ej. glicemia alterada, colesterol elevado), registrar los resultados TAMBIÉN en REM A02 sección D.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Enfermería",
+        "Matronería",
+        "Médico",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-044",
+      "prestacion": "Atención de Rehabilitación - Ingreso y Sesiones (CCR / Sala de Rehabilitación)",
+      "terminos_busqueda": [
+        "rehabilitacion",
+        "rehabilitación",
+        "ccr",
+        "sala rehabilitacion",
+        "sala rehabilitación",
+        "ingreso rehabilitacion",
+        "sesion rehabilitacion",
+        "sesión rehabilitación",
+        "terapia ocupacional rehabilitacion",
+        "fonoaudiologia rehabilitacion"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A28 Sección A",
+        "pagina": "480"
+      },
+      "registro_principal": {
+        "pestaña": "REM A28",
+        "seccion": "Sección A: Atenciones de Rehabilitación Nivel Primario",
+        "serie": "Ingresos, egresos, evaluaciones y sesiones por profesional (kinesiólogo, TO, fonoaudiólogo)",
+        "columnas": "Col. por tipo de actividad, profesional, rango etario, sexo",
+        "descripcion": "Registrar ingresos, evaluaciones iniciales, evaluaciones intermedias, sesiones de rehabilitación y procedimientos. Los kinesiólogos que atienden en sala de rehabilitación registran aquí, NO en REM A04."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-044-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección B: Consulta de Kinesiólogo",
+          "mensaje": "Los procedimientos de kinesiólogo en sala de rehabilitación van en REM A28, NO en REM A04 sección B. Solo las consultas ambulatorias no asociadas a sala de rehabilitación ni sala IRA-ERA van en A04.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-044-b",
+          "pestaña_destino": "REM A28",
+          "seccion_destino": "Sección A.2: Ingreso por condición de salud",
+          "mensaje": "Al ingresar, especificar la condición de salud que motiva la rehabilitación (musculoesquelética, neurológica, cardiovascular, respiratoria, etc.).",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Kinesiología",
+        "Fonoaudiología",
+        "Terapia Ocupacional"
+      ]
+    },
+    {
+      "id": "rem-045",
+      "prestacion": "Ingreso a Programa de Regulación de Fertilidad (MAC)",
+      "terminos_busqueda": [
+        "regulacion fertilidad",
+        "regulación fertilidad",
+        "mac",
+        "anticonceptivo",
+        "anticonceptivos",
+        "diu",
+        "implante",
+        "inyectable",
+        "pildora",
+        "píldora",
+        "planificacion familiar",
+        "planificación familiar",
+        "preservativo programa"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección C",
+        "pagina": "125"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección C: Ingresos a Programa de Regulación de Fertilidad",
+        "serie": "Por método anticonceptivo: DIU cobre / DIU LNG / Hormonal oral / Inyectable / Implante / Preservativo / Anillo vaginal / Esterilización / Otros",
+        "columnas": "Col. por método, rango etario, sexo, espacio amigable, MAC más preservativo",
+        "descripcion": "Registrar cada persona que ingresa al programa de regulación de fertilidad según su método anticonceptivo. Si es cambio de método, registrar en columna aparte (NO incluir en el total). El MAC más preservativo (doble protección) se registra en columna separada."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-045-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control de Regulación de Fecundidad",
+          "mensaje": "Los controles de seguimiento de regulación de fertilidad se registran en REM A01 sección A, no en REM A05.",
+          "criticidad": "media"
+        },
+        {
+          "id": "cruce-045-b",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección C: Consulta Anticoncepción de Emergencia",
+          "mensaje": "Si la consulta fue por anticoncepción de emergencia, registrar en REM A04 sección C. Esas consultas deben estar incluidas en secciones A y B del REM A04.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-046",
+      "prestacion": "Consulta Abreviada (Repetición de Receta / Lectura de Exámenes)",
+      "terminos_busqueda": [
+        "consulta abreviada",
+        "receta cronica",
+        "receta crónica",
+        "repetir receta",
+        "lectura examen",
+        "lectura examenes",
+        "renovar receta",
+        "renovacion receta"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección E",
+        "pagina": "97"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección E: Consulta Abreviada",
+        "serie": "Consultas abreviadas por profesional",
+        "columnas": "Col. por profesional y rango etario",
+        "descripcion": "Se registran las consultas para REPETIR recetas de pacientes crónicos o para LECTURA de exámenes. No es una consulta de morbilidad propiamente tal. Rendimiento: 12 consultas por hora médica."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Nutrición",
+        "Matronería",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-047",
+      "prestacion": "Rondas Médicas / Profesionales a Postas Rurales",
+      "terminos_busqueda": [
+        "ronda",
+        "ronda medica",
+        "ronda médica",
+        "posta rural",
+        "ronda rural",
+        "ronda profesional",
+        "atencion rural",
+        "atención rural",
+        "cecosf rural"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección J",
+        "pagina": "111"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección J: Rondas por tipo y profesional",
+        "serie": "N° de rondas por tipo de ronda y profesional que la realiza",
+        "columnas": "Col. por tipo de ronda y profesional",
+        "descripcion": "Registrar cada ronda realizada a postas u otros puntos de atención según tipo (médica general, odontológica, matrona, enfermera, kinesiólogo, etc.)."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Odontología",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social"
+      ]
+    },
+    {
+      "id": "rem-048",
+      "prestacion": "GES Odontológico (Embarazada, 6 años, 60 años, Programa Especial)",
+      "terminos_busqueda": [
+        "ges dental embarazada",
+        "ges 6 años dental",
+        "ges 60 años dental",
+        "programa odontologico",
+        "programa odontológico",
+        "reforzamiento dental",
+        "sembrando sonrisas",
+        "programa dental especial"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A09 Sección G",
+        "pagina": "256"
+      },
+      "registro_principal": {
+        "pestaña": "REM A09",
+        "seccion": "Sección G: Programas Especiales y GES",
+        "serie": "GES Embarazada / GES 6 años / GES 60 años / Sembrando Sonrisas / Otros programas de reforzamiento",
+        "columnas": "Col. por programa, tipo de actividad (ingresos, altas, actividades)",
+        "descripcion": "Las altas de programas especiales (GES embarazada, GES 60 años con tratamiento de reforzamiento) se registran en ESTA sección, no en sección C. Las consultas de morbilidad de estos programas también van aquí, separadas de la producción regular."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-048-a",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección C: Altas odontológicas integrales",
+          "mensaje": "Las altas del programa de reforzamiento (GES embarazada, GES 60 años) van en sección G, no en sección C. Solo altas preventivas de GES 60 años van en sección C.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-048-b",
+          "pestaña_destino": "REM A09",
+          "seccion_destino": "Sección A y B: Producción regular",
+          "mensaje": "La producción de programas de reforzamiento NO se incluye en el total de secciones A y B. Son compras de servicio o extensiones horarias con financiamiento especial.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-049",
+      "prestacion": "Consulta de Trabajador/a Social",
+      "terminos_busqueda": [
+        "trabajador social",
+        "trabajadora social",
+        "asistente social",
+        "consulta social",
+        "informe social",
+        "visita social",
+        "intervención social",
+        "intervencion social"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Trabajador/a Social (excluye Salud Mental)",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Consulta mediante la cual el Trabajador/a Social establece un diagnóstico socio-familiar, orienta en solución de problemas sociales y coordina ayudas y subsidios a través de la acción intersectorial."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-049-a",
+          "pestaña_destino": "REM A06",
+          "seccion_destino": "Sección A: Programa de Salud Mental APS",
+          "mensaje": "Si la consulta de Trabajador/a Social es para un paciente del programa de Salud Mental, registrar en REM A06, no en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Trabajo Social"
+      ]
+    },
+    {
+      "id": "rem-050",
+      "prestacion": "Consulta de Fonoaudiólogo/a",
+      "terminos_busqueda": [
+        "consulta fonoaudiologo",
+        "consulta fonoaudióloga",
+        "fonoaudiologia",
+        "fonoaudiología",
+        "lenguaje",
+        "deglución",
+        "deglucion",
+        "voz",
+        "audiologia",
+        "audiología",
+        "trastorno lenguaje"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Fonoaudiólogo(a)",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Atención otorgada a personas derivadas para evaluación, diagnóstico o tratamiento fonoaudiológico. Incluye técnicas y procedimientos propios de la profesión."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-050-a",
+          "pestaña_destino": "REM A28",
+          "seccion_destino": "Sección A: Rehabilitación",
+          "mensaje": "Si el fonoaudiólogo atiende dentro del programa de rehabilitación (CCR/sala de rehabilitación), registrar en REM A28 y no en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Fonoaudiología"
+      ]
+    },
+    {
+      "id": "rem-051",
+      "prestacion": "Consulta de Terapeuta Ocupacional",
+      "terminos_busqueda": [
+        "terapeuta ocupacional",
+        "terapia ocupacional",
+        "consulta to",
+        "to aps",
+        "terapeuta ocupacional consulta"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección B",
+        "pagina": "93"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección B: Consultas de profesionales no médicos",
+        "serie": "Consulta de Terapeuta Ocupacional",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Atención proporcionada a un paciente derivado por profesional médico, con el propósito de apoyar su recuperación o rehabilitación, utilizando técnicas y procedimientos propios de la profesión."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-051-a",
+          "pestaña_destino": "REM A28",
+          "seccion_destino": "Sección A: Rehabilitación",
+          "mensaje": "Si el Terapeuta Ocupacional atiende dentro del programa de rehabilitación (CCR/sala de rehabilitación), registrar en REM A28 y no en REM A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Terapia Ocupacional"
+      ]
+    },
+    {
+      "id": "rem-052",
+      "prestacion": "Consulta de Lactancia Materna",
+      "terminos_busqueda": [
+        "lactancia",
+        "lactancia materna",
+        "consulta lactancia",
+        "apoyo lactancia",
+        "clinica lactancia",
+        "clínica lactancia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A04 Sección L",
+        "pagina": "112"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección L: Consulta de lactancia materna en niños y niñas controlados",
+        "serie": "Consultas de lactancia por profesional",
+        "columnas": "Col. por tipo de lactancia (exclusiva, predominante, complementaria), rango etario del niño/a",
+        "descripcion": "Registrar las consultas de apoyo a la lactancia materna, indicando el tipo de lactancia que recibe el niño/a al momento de la consulta."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Nutrición",
+        "Enfermería",
+        "Matronería",
+        "Médico",
+        "Fonoaudiología"
+      ]
+    },
+    {
+      "id": "rem-053",
+      "prestacion": "Ingreso de Recién Nacido a Control de Salud",
+      "terminos_busqueda": [
+        "ingreso recien nacido",
+        "ingreso recién nacido",
+        "recien nacido ingreso",
+        "rn ingreso",
+        "control rn",
+        "primer control rn",
+        "ingreso neonato"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección E",
+        "pagina": "128"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección E: Ingresos a control de salud de recién nacidos",
+        "serie": "Ingresos de niños/as ≤28 días a control de niño sano",
+        "columnas": "Col. por sexo y profesional (Médico, Matrona, Enfermera Matrona)",
+        "descripcion": "Registrar cada RN que ingresa a control de niño sano en APS, idealmente dentro de los 10 primeros días de vida como 'Control de la Díada Madre-Hijo/a'."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-053-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control puérpera con RN / Sección B: Control menor 1 mes",
+          "mensaje": "Al ingresar al RN, también registrar en REM A01: 1 control puérpera con RN en sección A + 1 control menor de 1 mes en sección B.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería"
+      ]
+    },
+    {
+      "id": "rem-054",
+      "prestacion": "Programa de Atención Domiciliaria - Dependencia Severa",
+      "terminos_busqueda": [
+        "dependencia severa",
+        "postrado",
+        "paciente postrado",
+        "atencion domiciliaria dependencia",
+        "atención domiciliaria dependencia",
+        "cuidador dependencia",
+        "programa dependencia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A05 Sección W",
+        "pagina": "155"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección W: Ingresos y egresos a atenciones del Programa de atención domiciliaria para personas con dependencia severa",
+        "serie": "Ingresos y egresos por tipo de dependencia",
+        "columnas": "Col. por rango etario y sexo",
+        "descripcion": "Registrar ingresos y egresos al programa de dependencia severa. El seguimiento se registra en visitas domiciliarias (REM A26)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-054-a",
+          "pestaña_destino": "REM A26",
+          "seccion_destino": "Sección A: Visitas domiciliarias",
+          "mensaje": "Las visitas domiciliarias a pacientes con dependencia severa deben registrarse en REM A26, además de la sección W del REM A05.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Kinesiología",
+        "Nutrición",
+        "Psicología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional"
+      ]
+    },
+    {
+      "id": "rem-055",
+      "prestacion": "Aplicación de Escalas y Pautas en Adulto Mayor (EFAM, Barthel, Yesavage, etc.)",
+      "terminos_busqueda": [
+        "efam",
+        "barthel",
+        "yesavage",
+        "minimental",
+        "pfeffer",
+        "zarit",
+        "tinetti",
+        "escala adulto mayor",
+        "evaluacion funcional",
+        "evaluación funcional"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A03 Sección C",
+        "pagina": "65"
+      },
+      "registro_principal": {
+        "pestaña": "REM A03",
+        "seccion": "Sección C: Escalas e instrumentos de evaluación del adulto mayor",
+        "serie": "Por tipo de escala (EFAM, Barthel, etc.) y resultado",
+        "columnas": "Col. por resultado de la escala, rango etario y sexo",
+        "descripcion": "Registrar CADA escala aplicada al adulto mayor con su resultado. Si se aplican 3 escalas distintas en una misma atención (ej. durante el EMPAM), deben registrarse las 3 por separado."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-055-a",
+          "pestaña_destino": "REM A02",
+          "seccion_destino": "Sección A: EMP realizado por profesional (EMPAM)",
+          "mensaje": "Si estas escalas se aplicaron durante un EMPAM, asegurar que el examen esté registrado en REM A02 como EMP en grupo de 65+ años.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Kinesiología",
+        "Terapia Ocupacional"
+      ]
+    },
+    {
+      "id": "rem-056",
+      "prestacion": "Aplicación de Pautas Psicosociales y Salud Mental (EPSA, Edimburgo, AUDIT, etc.)",
+      "terminos_busqueda": [
+        "epsa",
+        "edimburgo",
+        "edinburgh",
+        "audit",
+        "assist",
+        "craff",
+        "riesgo psicosocial",
+        "escala salud mental",
+        "consumo alcohol",
+        "consumo drogas",
+        "cuestionario"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A03 Secciones B y D",
+        "pagina": "63"
+      },
+      "registro_principal": {
+        "pestaña": "REM A03",
+        "seccion": "Sección B (Gestantes y Puérperas) / Sección D (Riesgo y Consumo)",
+        "serie": "Por tipo de pauta (EPSA, Edimburgo, AUDIT, ASSIST, CRAFF, M-CHAT) y resultado",
+        "columnas": "Col. por resultado, rango etario y sexo",
+        "descripcion": "Registrar la aplicación de cada pauta. La EPSA se aplica a gestantes. El AUDIT/ASSIST/CRAFF es transversal y clave para el EMP."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-056-a",
+          "pestaña_destino": "REM A05",
+          "seccion_destino": "Sección A: Ingresos a Programa Prenatal",
+          "mensaje": "OBLIGATORIO: El número de pautas EPSA aplicadas debe ser igual al total de gestantes ingresadas en REM A05 sección A.",
+          "criticidad": "alta"
+        },
+        {
+          "id": "cruce-056-b",
+          "pestaña_destino": "REM A02",
+          "seccion_destino": "Sección A: EMP (Examen Medicina Preventiva)",
+          "mensaje": "OBLIGATORIO: La suma de AUDIT+ASSIST (20+ años) o CRAFF (15-19 años) debe cuadrar con el total de EMP registrados en REM A02.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Psicología",
+        "Trabajo Social"
+      ]
+    },
+    {
+      "id": "rem-057",
+      "prestacion": "Test de Desarrollo Psicomotor en Niños (TEPSI, EEDP, DSM, Battelle)",
+      "terminos_busqueda": [
+        "tepsi",
+        "eedp",
+        "dsm",
+        "battelle",
+        "desarrollo psicomotor",
+        "rezago",
+        "retraso psicomotor",
+        "escala desarrollo",
+        "test niño"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A03 Sección A",
+        "pagina": "54"
+      },
+      "registro_principal": {
+        "pestaña": "REM A03",
+        "seccion": "Sección A: Evaluaciones de desarrollo psicomotor",
+        "serie": "Por tipo de test (EEDP, TEPSI, Battelle) y resultado (Normal, Rezago, Riesgo, Retraso)",
+        "columnas": "Col. por resultado y rango etario del niño/a",
+        "descripcion": "Registrar todo test aplicado al niño/a y su resultado. Generalmente se aplican en los controles de niño sano clave (ej. 8, 18, 36 meses)."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-057-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección B: Control de salud de niño/a",
+          "mensaje": "Si el test se aplicó durante el control de niño sano, verificar que el control esté registrado en REM A01 sección B.",
+          "criticidad": "media"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-058",
+      "prestacion": "Prevención de Transmisión Vertical (VIH y Sífilis Materno Infantil)",
+      "terminos_busqueda": [
+        "transmision vertical",
+        "transmisión vertical",
+        "vih embarazo",
+        "sifilis embarazo",
+        "sífilis embarazo",
+        "protocolo vih",
+        "expuesto vih",
+        "expuesto sifilis",
+        "penicilina gestante"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A11a",
+        "pagina": "295"
+      },
+      "registro_principal": {
+        "pestaña": "REM A11a",
+        "seccion": "Prevención Transmisión Vertical de VIH y Sífilis",
+        "serie": "Gestantes detectadas / Inicio tratamiento / Niños expuestos",
+        "columnas": "Col. por condición (VIH, Sífilis) y trimestre de gestación / edad del niño",
+        "descripcion": "Registrar ingreso a protocolo de transmisión vertical para gestantes con VDRL/RPR reactivo o test rápido VIH (+). También registrar el seguimiento de los recién nacidos expuestos."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-058-a",
+          "pestaña_destino": "REM A01",
+          "seccion_destino": "Sección A: Control prenatal o Control post parto",
+          "mensaje": "Las atenciones a la gestante/puérpera se registran como controles en REM A01 sección A.",
+          "criticidad": "baja"
+        }
+      ],
+      "profesiones": [
+        "Matronería",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-059",
+      "prestacion": "Actividades de Promoción de la Salud",
+      "terminos_busqueda": [
+        "promocion",
+        "promoción",
+        "feria salud",
+        "feria de la salud",
+        "stand salud",
+        "pausa activa",
+        "actividad comunitaria",
+        "campaña salud",
+        "taller promocion"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A19a",
+        "pagina": "311"
+      },
+      "registro_principal": {
+        "pestaña": "REM A19a",
+        "seccion": "Actividades de Promoción de la Salud",
+        "serie": "Por tipo de actividad (feria, jornada, pausa activa, consejería) y entorno",
+        "columnas": "Col. por entorno (educativo, comunitario, laboral) y N° asistentes",
+        "descripcion": "Registrar actividades fuera del box clínico orientadas a educar y fomentar estilos de vida saludables en la comunidad (ferias, pausas activas, talleres)."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-060",
+      "prestacion": "Actividades de Participación Social en Salud",
+      "terminos_busqueda": [
+        "participacion social",
+        "participación social",
+        "consejo consultivo",
+        "cdl",
+        "dialogo ciudadano",
+        "diagnostico participativo",
+        "reunion comunidad",
+        "presupuesto participativo"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A19b",
+        "pagina": "325"
+      },
+      "registro_principal": {
+        "pestaña": "REM A19b",
+        "seccion": "Actividades de Participación Social",
+        "serie": "Por tipo de mecanismo (Consejo Desarrollo, Cuenta Pública, OIRS, etc.)",
+        "columnas": "Col. por tipo de actividad y cantidad de participantes",
+        "descripcion": "Registrar reuniones del Consejo de Desarrollo/Consultivo, diálogos ciudadanos, cuentas públicas y trabajo intersectorial con organizaciones de la comunidad."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-061",
+      "prestacion": "Cirugía Menor en Pabellón / Quirófano APS",
+      "terminos_busqueda": [
+        "cirugia menor",
+        "cirugía menor",
+        "pabellon",
+        "pabellón",
+        "quirofano",
+        "quirófano",
+        "extraccion lunar",
+        "lipoma",
+        "uña encarnada",
+        "onicocriptosis"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A21",
+        "pagina": "349"
+      },
+      "registro_principal": {
+        "pestaña": "REM A21",
+        "seccion": "Quirófanos y Cirugía Menor",
+        "serie": "Pacientes intervenidos / programados / suspendidos en cirugía menor",
+        "columnas": "Col. por horario (hábil/inhábil), especialidad, suspendidos",
+        "descripcion": "Solo para CESFAM con pabellón autorizado. Registrar pacientes intervenidos, programados y suspendidos. Excluye procedimientos básicos de box que van en A04."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-061-a",
+          "pestaña_destino": "REM A04",
+          "seccion_destino": "Sección B: Procedimientos o Cirugía Menor Box",
+          "mensaje": "Los procedimientos de cirugía menor realizados en box regular (sin pabellón) se registran como procedimiento médico en REM A04, no en A21.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-062",
+      "prestacion": "Imágenes Diagnósticas y Resolutividad APS (Rayos X, Ecografías)",
+      "terminos_busqueda": [
+        "rayos x",
+        "radiografia",
+        "radiografía",
+        "rx",
+        "ecografia",
+        "ecografía",
+        "eco",
+        "resolutividad",
+        "imagenologia",
+        "imagenología",
+        "mamografia resolutividad"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A29",
+        "pagina": "510"
+      },
+      "registro_principal": {
+        "pestaña": "REM A29",
+        "seccion": "Programa de Imágenes y Resolutividad",
+        "serie": "Por tipo de examen: Radiografías / Ecografías / Endoscopías",
+        "columnas": "Col. por sub-tipo (tórax, pelvis, eco abdominal) y rango etario",
+        "descripcion": "Registrar los exámenes imagenológicos tomados en el CESFAM (UAPO, UAR, salas de rayos) bajo fondos de resolutividad u otros."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-063",
+      "prestacion": "Telemedicina y Teleinterconsulta (Sincrónica / Asincrónica)",
+      "terminos_busqueda": [
+        "telemedicina",
+        "teleinterconsulta",
+        "teleconsulta",
+        "consulta virtual",
+        "derivacion remota",
+        "hospital digital",
+        "sic remota",
+        "interconsulta digital"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A30",
+        "pagina": "522"
+      },
+      "registro_principal": {
+        "pestaña": "REM A30",
+        "seccion": "Atención de Salud a Distancia (Telemedicina)",
+        "serie": "Teleinterconsultas generadas / respondidas por especialidad",
+        "columnas": "Col. por tipo (Sincrónica/Asincrónica), especialidad y resultado",
+        "descripcion": "Para médicos APS: registrar las teleinterconsultas (SIC virtuales) enviadas a especialistas (Hospital Digital o nivel secundario) a través de plataforma formal."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-064",
+      "prestacion": "Atención Remota (Telefónica / Videollamada)",
+      "terminos_busqueda": [
+        "atencion remota",
+        "atención remota",
+        "llamada telefonica",
+        "llamada telefónica",
+        "seguimiento telefonico",
+        "videollamada",
+        "zoom salud",
+        "whatsapp salud",
+        "control remoto"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A32",
+        "pagina": "556"
+      },
+      "registro_principal": {
+        "pestaña": "REM A32",
+        "seccion": "Actividades de Atención de Salud Remota",
+        "serie": "Consultas, controles y seguimientos por profesional",
+        "columnas": "Col. por tipo de prestación (telefónica o videollamada), profesional, rango etario",
+        "descripcion": "Registrar las atenciones realizadas a distancia (ej. seguimiento de paciente crónico por teléfono, control psicológico por videollamada). Remplaza al registro presencial."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-064-a",
+          "pestaña_destino": "REM A01 o A04",
+          "seccion_destino": "No registrar en A01/A04",
+          "mensaje": "OBLIGATORIO: La atención remota SE REGISTRA SOLO EN REM A32. No se debe duplicar registrándola también como consulta/control presencial en REM A01 o A04.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Fonoaudiología",
+        "Terapia Ocupacional",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-065",
+      "prestacion": "Medicinas Complementarias y Sanación (Lawentuchefe, Acupuntura, etc.)",
+      "terminos_busqueda": [
+        "lawentuchefe",
+        "machi",
+        "medicina mapuche",
+        "pueblos originarios",
+        "medicina complementaria",
+        "acupuntura",
+        "terapia floral",
+        "reiki",
+        "masoterapia",
+        "sanacion"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A31",
+        "pagina": "547"
+      },
+      "registro_principal": {
+        "pestaña": "REM A31",
+        "seccion": "Medicinas Complementarias y Prácticas de Bienestar",
+        "serie": "Por tipo de práctica (Sistemas médicos de pueblos originarios, Terapias manuales, Mente-Cuerpo, etc.)",
+        "columnas": "Col. por tipo de práctica, atenciones e ingresos",
+        "descripcion": "Registrar atenciones otorgadas por agentes de medicina tradicional (ej. Lawentuchefe) o terapeutas complementarios autorizados que atienden en el CESFAM."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Kinesiología",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-066",
+      "prestacion": "Cuidados Paliativos Universales en APS",
+      "terminos_busqueda": [
+        "paliativo",
+        "cuidados paliativos",
+        "terminal",
+        "alivio dolor",
+        "enfermedad terminal",
+        "cancer paliativo",
+        "oncológico paliativo",
+        "cpa",
+        "paliativos aps"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A33",
+        "pagina": "580"
+      },
+      "registro_principal": {
+        "pestaña": "REM A33",
+        "seccion": "Cuidados Paliativos Nivel APS",
+        "serie": "Ingresos, egresos y atenciones de pacientes oncológicos y no oncológicos",
+        "columnas": "Col. por diagnóstico (oncológico/no oncológico), rango etario y profesional",
+        "descripcion": "Registrar el ingreso y todas las atenciones (controles, visitas domiciliarias) brindadas por el equipo de APS a pacientes en programa de cuidados paliativos."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-066-a",
+          "pestaña_destino": "REM A26",
+          "seccion_destino": "Sección A: Visitas domiciliarias",
+          "mensaje": "Las visitas domiciliarias por cuidados paliativos se registran en A33. NO duplicar registrando también en REM A26.",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Matronería",
+        "Kinesiología",
+        "Psicología",
+        "Trabajo Social",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-067",
+      "prestacion": "Programa PRAIS",
+      "terminos_busqueda": [
+        "prais",
+        "programa prais",
+        "reparacion salud",
+        "reparación salud",
+        "derechos humanos",
+        "paciente prais",
+        "atencion prais"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.1",
+        "seccion_manual": "REM A34",
+        "pagina": "592"
+      },
+      "registro_principal": {
+        "pestaña": "REM A34",
+        "seccion": "Programa de Reparación y Atención en Salud (PRAIS)",
+        "serie": "Ingresos, consultas y actividades de equipo PRAIS",
+        "columnas": "Col. por tipo de atención, profesional y rango etario",
+        "descripcion": "Registro exclusivo para las atenciones brindadas por el equipo de enlace PRAIS del CESFAM a los beneficiarios de este programa."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería",
+        "Nutrición",
+        "Psicología",
+        "Kinesiología",
+        "Trabajo Social",
+        "Odontología"
+      ]
+    },
+    {
+      "id": "rem-068",
+      "prestacion": "Ingreso a Sala de Estimulación / MADIS (Chile Crece Contigo)",
+      "terminos_busqueda": [
+        "ingreso sala estimulacion",
+        "ingreso madis",
+        "ingreso chile crece",
+        "chcc",
+        "retraso psicomotor",
+        "rezago",
+        "educadora",
+        "parvulos",
+        "párvulos",
+        "estimulacion temprana"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.2",
+        "seccion_manual": "REM A05 Sección F",
+        "pagina": "129"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección F: Ingresos a sala de estimulación, servicio itinerante y atención domiciliaria",
+        "serie": "Ingresos por modalidad",
+        "columnas": "Col. por motivo de ingreso (Riesgo, Rezago, Retraso, Otra vulnerabilidad), rango etario y sexo",
+        "descripcion": "Registrar a los niños/as que ingresan por primera vez a la modalidad de estimulación derivado por alteración en su DSM. Si es un reingreso o egreso, registrar en la Sección F.1."
+      },
+      "validaciones_cruzadas": [
+        {
+          "id": "cruce-068-a",
+          "pestaña_destino": "REM A03",
+          "seccion_destino": "Sección A: Evaluaciones de desarrollo psicomotor",
+          "mensaje": "Los ingresos a estimulación deben tener origen en una alteración detectada y registrada en el REM A03 (TEPSI, EEDP).",
+          "criticidad": "alta"
+        }
+      ],
+      "profesiones": [
+        "Fonoaudiología",
+        "Educación Párvulos",
+        "Kinesiología",
+        "Médico"
+      ]
+    },
+    {
+      "id": "rem-069",
+      "prestacion": "Sesión de Atención en Sala de Estimulación (MADIS)",
+      "terminos_busqueda": [
+        "sesion estimulacion",
+        "atencion estimulacion",
+        "sala de estimulacion",
+        "madis",
+        "chile crece",
+        "educadora",
+        "parvulos",
+        "párvulos",
+        "intervencion madis"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A DV1.2",
+        "seccion_manual": "REM A04 Sección O",
+        "pagina": "115"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección O: Atenciones en Modalidades de Apoyo al Desarrollo Infantil (MADIS)",
+        "serie": "Atenciones presenciales en sala, domicilio o servicio itinerante",
+        "columnas": "Col. por tipo de atención, rango etario y tipo de diagnóstico",
+        "descripcion": "Registrar cada sesión o contacto presencial de estimulación (individual o grupal) realizada al niño/a por los profesionales del equipo MADIS (Educadora de Párvulos, Fonoaudiólogo, etc.)."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Fonoaudiología",
+        "Educación Párvulos",
+        "Kinesiología"
+      ]
+    },
+    {
+      "id": "rem-070",
+      "prestacion": "Ingreso y Control Programa Tuberculosis (PROCET)",
+      "terminos_busqueda": [
+        "tbc",
+        "tuberculosis",
+        "procet",
+        "bk",
+        "baciloscopia"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A04 Sec M",
+        "pagina": "114"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección M: Atenciones ambulatorias por el Programa Tuberculosis",
+        "serie": "Ingresos y controles",
+        "columnas": "Col. por profesional y rango etario",
+        "descripcion": "Registrar el ingreso o control clínico del paciente diagnosticado con TBC."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-071",
+      "prestacion": "Administración de tratamiento DOTS (TBC)",
+      "terminos_busqueda": [
+        "dots",
+        "tbc",
+        "tuberculosis",
+        "procet",
+        "tratamiento"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A04 Sec M",
+        "pagina": "114"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Sección M: Atenciones ambulatorias por el Programa Tuberculosis",
+        "serie": "Tratamientos (DOTS)",
+        "columnas": "Col. por lugar de administración (CESFAM, Domicilio)",
+        "descripcion": "Registrar cada administración del tratamiento directamente observado (DOTS) a pacientes con TBC."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Enfermería",
+        "TENS"
+      ]
+    },
+    {
+      "id": "rem-072",
+      "prestacion": "Aplicación de Test M-CHAT-R/F (Sospecha TEA)",
+      "terminos_busqueda": [
+        "tea",
+        "autismo",
+        "m-chat",
+        "mchat",
+        "espectro autista"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A03 Sec F.1",
+        "pagina": "81"
+      },
+      "registro_principal": {
+        "pestaña": "REM A03",
+        "seccion": "Sección F.1: Sospecha de Trastorno de Espectro Autista",
+        "serie": "Niños y niñas evaluados",
+        "columnas": "Col. por resultado de la pauta y rango etario (16 a 30 meses)",
+        "descripcion": "Registrar la aplicación del test M-CHAT-R/F para detección temprana de autismo, durante el control de niño sano u otra atención."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Médico",
+        "Enfermería"
+      ]
+    },
+    {
+      "id": "rem-073",
+      "prestacion": "Ingreso y Evaluación Programa Elige Vida Sana",
+      "terminos_busqueda": [
+        "vida sana",
+        "elige vida sana",
+        "pevs",
+        "obesidad",
+        "sobrepeso"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A04 Sec E / A05",
+        "pagina": "98"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Secciones de Ingresos a Programas (Vida Sana)",
+        "serie": "Ingresos",
+        "columnas": "Col. por rango etario y perfil",
+        "descripcion": "Registrar el ingreso o evaluación nutricional/física/psicológica al programa Elige Vida Sana."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Nutrición",
+        "Kinesiología",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-074",
+      "prestacion": "Sesiones de Actividad Física y Talleres Vida Sana",
+      "terminos_busqueda": [
+        "vida sana",
+        "taller vida sana",
+        "actividad fisica",
+        "pevs",
+        "sesion pevs"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A04 Sec E / A32 Sec M",
+        "pagina": "98"
+      },
+      "registro_principal": {
+        "pestaña": "REM A04",
+        "seccion": "Atenciones y talleres Elige Vida Sana",
+        "serie": "Sesiones",
+        "columnas": "Col. por tipo de actividad y rango etario",
+        "descripcion": "Registrar la asistencia a talleres de actividad física, psicológicos o nutricionales del programa Elige Vida Sana."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Nutrición",
+        "Kinesiología",
+        "Psicología"
+      ]
+    },
+    {
+      "id": "rem-075",
+      "prestacion": "Ingreso e Intervenciones Identidad de Género (PAIG)",
+      "terminos_busqueda": [
+        "paig",
+        "identidad de genero",
+        "trans",
+        "crece con orgullo",
+        "acompañamiento"
+      ],
+      "fuente_regla": {
+        "documento": "Manual REM 2026 Serie A",
+        "seccion_manual": "REM A05 Sec Y",
+        "pagina": "162"
+      },
+      "registro_principal": {
+        "pestaña": "REM A05",
+        "seccion": "Sección Y: Intervenciones Programa Acompañamiento a la Identidad de Género",
+        "serie": "Ingresos e intervenciones",
+        "columnas": "Col. por tipo de intervención (individual, familiar) y rango etario",
+        "descripcion": "Registrar ingresos y atenciones psicosociales realizadas a niños/as y adolescentes en el marco del PAIG (Crece con Orgullo)."
+      },
+      "validaciones_cruzadas": [],
+      "profesiones": [
+        "Psicología",
+        "Trabajo Social"
+      ]
+    }
+  ]
+}
