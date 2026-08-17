@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "navegador-rem-cesfam-futrono",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
